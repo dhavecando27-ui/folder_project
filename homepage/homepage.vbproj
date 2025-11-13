@@ -1,0 +1,841 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A86A5647-1666-4414-B589-2FE0603533FC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>homepage.My.MyApplication</StartupObject>
+    <RootNamespace>homepage</RootNamespace>
+    <AssemblyName>homepage</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ApplicationIcon>jmmu_logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>homepage.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>homepage.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.AddIn">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\admin.Designer.vb">
+      <DependentUpon>admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Backup_Restore.designer.vb">
+      <DependentUpon>Backup_Restore.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Backup_Restore.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cashier\Dashboard.designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cashier\Dashboard.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cashier\Prof_Sal.designer.vb">
+      <DependentUpon>Prof_Sal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cashier\Prof_Sal.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="homepage.designer.vb">
+      <DependentUpon>homepage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="homepage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="module\connection.vb" />
+    <Compile Include="professor\prof.designer.vb">
+      <DependentUpon>prof.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\prof.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="professor\classes.designer.vb">
+      <DependentUpon>classes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\classes.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="register\register.designer.vb">
+      <DependentUpon>register.vb</DependentUpon>
+    </Compile>
+    <Compile Include="register\register.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="student\profilestudent.designer.vb">
+      <DependentUpon>profilestudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student\profilestudent.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="recover\recover.designer.vb">
+      <DependentUpon>recover.vb</DependentUpon>
+    </Compile>
+    <Compile Include="recover\recover.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Registration of User.designer.vb">
+      <DependentUpon>Registration of User.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Registration of User.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cashier\students_acc.designer.vb">
+      <DependentUpon>students_acc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cashier\students_acc.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="admin\studentlist.Designer.vb">
+      <DependentUpon>studentlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\studentlist.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\SC_BSCE1.designer.vb">
+      <DependentUpon>SC_BSCE1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\SC_BSCE1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\SC_BSCE2.designer.vb">
+      <DependentUpon>SC_BSCE2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\SC_BSCE2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\SC_BSCE3.designer.vb">
+      <DependentUpon>SC_BSCE3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\SC_BSCE3.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\SC_BSCE4.designer.vb">
+      <DependentUpon>SC_BSCE4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\SC_BSCE4.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\SC_BSIS1.designer.vb">
+      <DependentUpon>SC_BSIS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\SC_BSIS1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\SC_BSIS2.designer.vb">
+      <DependentUpon>SC_BSIS2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\SC_BSIS2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\SC_BSIS3.designer.vb">
+      <DependentUpon>SC_BSIS3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\SC_BSIS3.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\SC_BSIS4.designer.vb">
+      <DependentUpon>SC_BSIS4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\SC_BSIS4.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\SC_BSIT1.designer.vb">
+      <DependentUpon>SC_BSIT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\SC_BSIT1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\SC_BSIT2.designer.vb">
+      <DependentUpon>SC_BSIT2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\SC_BSIT2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\SC_BSIT3.designer.vb">
+      <DependentUpon>SC_BSIT3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\SC_BSIT3.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\SC_BSIT4.designer.vb">
+      <DependentUpon>SC_BSIT4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\SC_BSIT4.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\SC_BSMA1.designer.vb">
+      <DependentUpon>SC_BSMA1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\SC_BSMA1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\SC_BSMA2.designer.vb">
+      <DependentUpon>SC_BSMA2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\SC_BSMA2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\SC_BSMA3.designer.vb">
+      <DependentUpon>SC_BSMA3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\SC_BSMA3.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\SC_BSMA4.designer.vb">
+      <DependentUpon>SC_BSMA4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\SC_BSMA4.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\section.designer.vb">
+      <DependentUpon>section.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\section.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\sched.designer.vb">
+      <DependentUpon>sched.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\sched.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="student\assessment.Designer.vb">
+      <DependentUpon>assessment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student\assessment.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="module\sessionlogin.vb" />
+    <Compile Include="student\home.Designer.vb">
+      <DependentUpon>home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student\home.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cashier\cashier.Designer.vb">
+      <DependentUpon>cashier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cashier\cashier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="student\student.Designer.vb">
+      <DependentUpon>student.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student\student.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="student\viewgrade.Designer.vb">
+      <DependentUpon>viewgrade.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student\viewgrade.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="admin\Unlock Account.designer.vb">
+      <DependentUpon>Unlock Account.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Unlock Account.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cashier\updatecas.designer.vb">
+      <DependentUpon>updatecas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cashier\updatecas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="professor\timevb.designer.vb">
+      <DependentUpon>timevb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\timevb.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSCE1ST.designer.vb">
+      <DependentUpon>UC_BSCE1ST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSCE1ST.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSCE2ND.designer.vb">
+      <DependentUpon>UC_BSCE2ND.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSCE2ND.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSCE3RD.designer.vb">
+      <DependentUpon>UC_BSCE3RD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSCE3RD.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSCE4TH.designer.vb">
+      <DependentUpon>UC_BSCE4TH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSCE4TH.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSCS1ST.designer.vb">
+      <DependentUpon>UC_BSCS1ST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSCS1ST.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSCS2ND.designer.vb">
+      <DependentUpon>UC_BSCS2ND.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSCS2ND.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSCS3RD.designer.vb">
+      <DependentUpon>UC_BSCS3RD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSCS3RD.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSCS4TH.designer.vb">
+      <DependentUpon>UC_BSCS4TH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSCS4TH.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSIS1ST.designer.vb">
+      <DependentUpon>UC_BSIS1ST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSIS1ST.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSIS3RD.designer.vb">
+      <DependentUpon>UC_BSIS3RD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSIS3RD.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSIS4TH.designer.vb">
+      <DependentUpon>UC_BSIS4TH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSIS4TH.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSMA1ST.designer.vb">
+      <DependentUpon>UC_BSMA1ST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSMA1ST.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSMA2ND.designer.vb">
+      <DependentUpon>UC_BSMA2ND.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSMA2ND.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSMA3RD.designer.vb">
+      <DependentUpon>UC_BSMA3RD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSMA3RD.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSMA4TH.designer.vb">
+      <DependentUpon>UC_BSMA4TH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSMA4TH.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSIT2ND.designer.vb">
+      <DependentUpon>UC_BSIT2ND.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSIT2ND.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSIS2ND.designer.vb">
+      <DependentUpon>UC_BSIS2ND.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSIS2ND.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSIT1ST.designer.vb">
+      <DependentUpon>UC_BSIT1ST.VB</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSIT1ST.VB">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSIT3RD.designer.vb">
+      <DependentUpon>UC_BSIT3RD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSIT3RD.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="professor\UC_BSIT4TH.designer.vb">
+      <DependentUpon>UC_BSIT4TH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\UC_BSIT4TH.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="module\variable.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="admin\admin.resx">
+      <DependentUpon>admin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Backup_Restore.resx">
+      <DependentUpon>Backup_Restore.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\studentlist.resx">
+      <DependentUpon>studentlist.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cashier\cashier.resx">
+      <DependentUpon>cashier.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cashier\Dashboard.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="homepage.resx">
+      <DependentUpon>homepage.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\prof.resx">
+      <DependentUpon>prof.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\classes.resx">
+      <DependentUpon>classes.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="register\register.resx">
+      <DependentUpon>register.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student\profilestudent.resx">
+      <DependentUpon>profilestudent.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="recover\recover.resx">
+      <DependentUpon>recover.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cashier\Prof_Sal.resx">
+      <DependentUpon>Prof_Sal.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Registration of User.resx">
+      <DependentUpon>Registration of User.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cashier\students_acc.resx">
+      <DependentUpon>students_acc.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\SC_BSCE1.resx">
+      <DependentUpon>SC_BSCE1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\SC_BSCE2.resx">
+      <DependentUpon>SC_BSCE2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\SC_BSCE3.resx">
+      <DependentUpon>SC_BSCE3.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\SC_BSCE4.resx">
+      <DependentUpon>SC_BSCE4.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\SC_BSIS1.resx">
+      <DependentUpon>SC_BSIS1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\SC_BSIS2.resx">
+      <DependentUpon>SC_BSIS2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\SC_BSIS3.resx">
+      <DependentUpon>SC_BSIS3.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\SC_BSIS4.resx">
+      <DependentUpon>SC_BSIS4.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\SC_BSIT1.resx">
+      <DependentUpon>SC_BSIT1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\SC_BSIT2.resx">
+      <DependentUpon>SC_BSIT2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\section.resx">
+      <DependentUpon>section.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\sched.resx">
+      <DependentUpon>sched.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student\assessment.resx">
+      <DependentUpon>assessment.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student\home.resx">
+      <DependentUpon>home.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student\student.resx">
+      <DependentUpon>student.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student\viewgrade.resx">
+      <DependentUpon>viewgrade.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Unlock Account.resx">
+      <DependentUpon>Unlock Account.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cashier\updatecas.resx">
+      <DependentUpon>updatecas.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\timevb.resx">
+      <DependentUpon>timevb.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSCE1ST.resx">
+      <DependentUpon>UC_BSCE1ST.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSCE2ND.resx">
+      <DependentUpon>UC_BSCE2ND.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSCE3RD.resx">
+      <DependentUpon>UC_BSCE3RD.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSCE4TH.resx">
+      <DependentUpon>UC_BSCE4TH.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSCS1ST.resx">
+      <DependentUpon>UC_BSCS1ST.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSCS2ND.resx">
+      <DependentUpon>UC_BSCS2ND.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSCS3RD.resx">
+      <DependentUpon>UC_BSCS3RD.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSCS4TH.resx">
+      <DependentUpon>UC_BSCS4TH.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSIS1ST.resx">
+      <DependentUpon>UC_BSIS1ST.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSIS3RD.resx">
+      <DependentUpon>UC_BSIS3RD.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSIS4TH.resx">
+      <DependentUpon>UC_BSIS4TH.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSMA1ST.resx">
+      <DependentUpon>UC_BSMA1ST.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSMA2ND.resx">
+      <DependentUpon>UC_BSMA2ND.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSMA3RD.resx">
+      <DependentUpon>UC_BSMA3RD.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSMA4TH.resx">
+      <DependentUpon>UC_BSMA4TH.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSIT2ND.resx">
+      <DependentUpon>UC_BSIT2ND.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSIS2ND.resx">
+      <DependentUpon>UC_BSIS2ND.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSIT1ST.resx">
+      <DependentUpon>UC_BSIT1ST.VB</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSIT3RD.resx">
+      <DependentUpon>UC_BSIT3RD.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\UC_BSIT4TH.resx">
+      <DependentUpon>UC_BSIT4TH.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\company pic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pfl pic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\543025592_1495905921427403_7928225758997697633_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ed81f9ce-5022-4816-842d-70903f861b5a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copilot_20250917_190320.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Resources\home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a5a4c836-40ea-4e6f-85be-76b3daf62ff4.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a5a4c836-40ea-4e6f-85be-76b3daf62ff41.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\megaphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\megaphone %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3f699555-07ed-4446-9892-8952addfc827.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homeyy_1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_imgstudent.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marketing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\megaphone %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cando.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KULAM.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="jmmu_logo.ico" />
+    <None Include="Resources\presentation %281%29.png" />
+    <None Include="Resources\event.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\admin.png" />
+    <None Include="Resources\graduation.png" />
+    <None Include="Resources\key.png" />
+    <None Include="Resources\backup.png" />
+    <None Include="Resources\e8e079a2-3f76-4e22-824d-79c3e712fe25.jpeg" />
+    <None Include="Resources\ac442551-2536-4fb8-a8a8-478ca80d3a17.jpeg" />
+    <Content Include="Resources\time-left.png" />
+    <None Include="Resources\user %282%29.png" />
+    <None Include="Resources\user %281%29.png" />
+    <None Include="Resources\unlock.png" />
+    <None Include="Resources\time-left1.png" />
+    <None Include="Resources\533585764_1831533714412526_1395594290981599302_n.jpg" />
+    <None Include="Resources\cbd9e307-3f7a-48eb-81b1-11181b8b230b.jpg" />
+    <None Include="Resources\leleiii.jpg" />
+    <None Include="Resources\%24this.Icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
