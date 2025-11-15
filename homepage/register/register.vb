@@ -42,7 +42,8 @@ Public Class register
             MessageBox.Show("Error generating ID: " & ex.Message)
             id.Text = "1"
         End Try
-        stat.Text = "ON"
+
+        stat.Text = "OFF"
 
         coursepanel.Visible = False
         subjectpanel.Visible = False
@@ -71,7 +72,7 @@ Public Class register
         Dim hashcode As register
         hashcode = New register()
         ' Validation
-        If id.Text = "" Or ln.Text = "" Or fn.Text = "" Or mi.Text = "" Or un.Text = "" Or pass.Text = "" Or add.Text = "" Or secques.SelectedIndex = -1 Or sa.Text = "" Or role.SelectedIndex = -1 Or stat.Text = "" Then
+        If id.Text = "" Or ln.Text = "" Or fn.Text = "" Or mi.Text = "" Or un.Text = "" Or pass.Text = "" Or add.Text = "" Or secques.SelectedIndex = -1 Or sa.Text = "" Or role.SelectedIndex = -1 Or stat.Text = "" Or ct.Text = "" Or age.Text = "" Then
 
             MessageBox.Show("Please fill in all fields!")
             Exit Sub
@@ -90,7 +91,7 @@ Public Class register
                     MessageBox.Show("Username already exists!")
                 Else
                     ' Insert new account
-                    Dim insertCmd As New MySqlCommand("INSERT INTO account(id, lastname, name, middlename, username, passwordusername, address, role, secques, secans, acc_status, course, subject)  VALUES(@id, @lastname, @name, @middlename, @username, @passwordusername, @address, @role, @secques, @secans, 'ON', @course, @subject)", conn)
+                    Dim insertCmd As New MySqlCommand("INSERT INTO account(id, lastname, name, middlename, username, passwordusername, address, role, secques, secans, acc_status, course, subject, age, contact)  VALUES(@id, @lastname, @name, @middlename, @username, @passwordusername, @address, @role, @secques, @secans, 'OFF', @course, @subject, @age, @contact)", conn)
 
                     insertCmd.Parameters.AddWithValue("@id", id.Text)
                     insertCmd.Parameters.AddWithValue("@lastname", ln.Text)
@@ -105,11 +106,13 @@ Public Class register
                     insertCmd.Parameters.AddWithValue("@acc_status", "ON")
                     insertCmd.Parameters.AddWithValue("@course", course.Text)
                     insertCmd.Parameters.AddWithValue("@subject", subject.Text)
-
+                    insertCmd.Parameters.AddWithValue("@age", age.Text)
+                    insertCmd.Parameters.AddWithValue("@contact", ct.Text)
 
                     insertCmd.ExecuteNonQuery()
 
-                    MessageBox.Show("Registration Successful!")
+                    MessageBox.Show("Registration submitted! Your account is currently OFF and awaiting admin approval.", "Registration Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
 
                     ' Example: balik sa login form (palitan depende sa form name mo)
                     Me.Hide()
@@ -172,5 +175,29 @@ Public Class register
 
     Private Sub LinkLabel2_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
         coursepanel.Visible = False
+    End Sub
+
+    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub Label15_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub TextBox2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ct.TextChanged
+
+    End Sub
+
+    Private Sub Panel2_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
+
+    Private Sub Label10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label10.Click
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles age.TextChanged
+
     End Sub
 End Class
